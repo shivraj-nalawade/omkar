@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omkar Jagadale — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1220; --panel:#091022; --accent:#4de1ff; --accent-2:#6b8cff; --muted:#9fb1c8; --glass:rgba(255,255,255,0.03);
+      --card-radius:14px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,Arial,Segoe UI;background:linear-gradient(180deg,#061226 0%,#040617 100%);color:#eaf2ff}
+    .wrap{max-width:1200px;margin:32px auto;padding:24px;display:grid;grid-template-columns:320px 1fr;gap:20px}
+
+    /* SIDEBAR */
+    .sidebar{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:22px;border-radius:var(--card-radius);box-shadow:0 10px 30px rgba(3,12,30,0.7)}
+    .photo{width:100%;height:220px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:36px;color:#01242d}
+    .name{margin-top:16px;font-size:20px;font-weight:700}
+    .role{color:var(--muted);font-size:13px;margin-top:6px}
+    .contact{margin-top:16px}
+    .contact div{font-size:14px;color:var(--muted);margin-bottom:8px}
+    .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#022;font-weight:700;text-decoration:none}
+    .skills{margin-top:18px}
+    .skill-pill{display:inline-block;background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:10px;margin:6px 6px 0 0;color:var(--muted);font-size:13px}
+
+    /* MAIN */
+    .main{padding:22px;border-radius:var(--card-radius);background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);box-shadow:0 10px 40px rgba(2,8,20,0.6)}
+    .hero{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+    .intro h1{font-size:28px;margin-bottom:6px}
+    .intro p{color:var(--muted);line-height:1.6}
+    .cta-row{margin-top:12px}
+    .cta{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#002; font-weight:700;text-decoration:none;margin-right:10px}
+
+    /* timeline-like projects */
+    .section{margin-top:20px}
+    .section h3{color:var(--accent);margin-bottom:10px}
+    .project{padding:14px;border-radius:12px;background:rgba(255,255,255,0.02);margin-bottom:12px;position:relative;overflow:hidden}
+    .project:before{content:"";position:absolute;left:0;top:0;width:6px;height:100%;background:linear-gradient(180deg,var(--accent),var(--accent-2));}
+
+    /* progress bars */
+    .bar{background:rgba(255,255,255,0.03);height:10px;border-radius:999px;overflow:hidden}
+    .fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));width:0;transition:width 900ms cubic-bezier(.2,.9,.2,1)}
+    .skill-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+
+    /* small details */
+    .muted{color:var(--muted)}
+    footer{margin-top:18px;color:var(--muted);text-align:center}
+
+    /* responsiveness */
+    @media(max-width:980px){.wrap{grid-template-columns:1fr;padding:16px}.photo{height:160px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="photo">
+        <img src="omkar.jpg" alt="Omkar Image" style="width:100%;height:100%;border-radius:12px;object-fit:cover;" />
+      </div>
+      <div class="name">Omkar Jagadale</div>
+      <div class="role">Electronics Engineering • IoT & LoRa • Smart Systems</div>
+
+      <div class="contact">
+        <div><strong>Email:</strong> <span class="muted">omkarjagadale2776@gmail.com</span></div>
+        <div><strong>Phone:</strong> <span class="muted">+91 9657076631</span></div>
+        <div><strong>Location:</strong> <span class="muted">Thergaon, Pune</span></div>
+      </div>
+
+      <a class="btn" href="#contact">Hire / Contact</a>
+
+      <div class="skills">
+        <div style="margin-top:14px;color:var(--muted);font-size:13px">Skills</div>
+        <div class="skill-pill">IoT</div>
+        <div class="skill-pill">LoRa</div>
+        <div class="skill-pill">Sensor Interfacing</div>
+        <div class="skill-pill">Cloud Dashboards</div>
+        <div class="skill-pill">C / C++</div>
+        <div class="skill-pill">Cybersecurity Basics</div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <div class="hero">
+        <div class="intro">
+          <h1>Hi, I’m <span style="color:var(--accent)">Omkar</span> — I build useful electronics and IoT systems</h1>
+          <p class="muted">I design and develop real-time projects using sensors, LoRa communication, and cloud dashboards. My work focuses on practical solutions like smart sanitation monitoring and smart farming systems. I also completed a cybersecurity internship with Cisco.</p>
+          <div class="cta-row">
+            <a class="cta" href="#projects">See Projects</a>
+            <a class="cta" href="#contact">Contact Me</a>
+          </div>
+        </div>
+        <div style="min-width:220px;text-align:right">
+          <div style="background:linear-gradient(135deg,var(--accent),var(--accent-2));padding:12px;border-radius:12px;color:#012;box-shadow:0 10px 30px rgba(0,123,255,0.12)">
+            <div style="font-size:14px;font-weight:700">Availability</div>
+            <div style="margin-top:8px;font-size:20px">Open for internships</div>
+          </div>
+
+          <div style="margin-top:12px;background:rgba(255,255,255,0.02);padding:10px;border-radius:10px;color:var(--muted)">
+            <div style="font-size:13px">CGPA</div>
+            <div style="font-weight:700;font-size:20px">7.14 / 10</div>
+          </div>
+        </div>
+      </div>
+
+      <section id="projects" class="section">
+        <h3>Selected Projects</h3>
+        <div class="project">
+          <strong>IoT, LoRa & AI-Based Smart Sanitation Monitoring</strong>
+          <p class="muted">Sensors + LoRa + AI to monitor public toilets, predict cleaning, and help manage maintenance at large pilgrimage sites.</p>
+          <div class="muted" style="font-size:13px;margin-top:8px">Technologies: LoRa • IoT Sensors • AI • Cloud Dashboard</div>
+        </div>
+
+        <div class="project">
+          <strong>IoT-Based Smart Farming System</strong>
+          <p class="muted">Real-time monitoring of soil and environmental data via LoRa to help farmers with irrigation decisions.</p>
+          <div class="muted" style="font-size:13px;margin-top:8px">Technologies: LoRa • Soil Sensors • Cloud Dashboard</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Skills & Proficiency</h3>
+        <div class="skill-row"><div>IoT & Embedded</div><div style="width:40%" class="bar"><div class="fill" data-fill="90%"></div></div></div>
+        <div class="skill-row"><div>LoRa & Wireless</div><div style="width:40%" class="bar"><div class="fill" data-fill="85%"></div></div></div>
+        <div class="skill-row"><div>Sensor Interfacing</div><div style="width:40%" class="bar"><div class="fill" data-fill="88%"></div></div></div>
+        <div class="skill-row"><div>Cloud Dashboards</div><div style="width:40%" class="bar"><div class="fill" data-fill="80%"></div></div></div>
+        <div class="skill-row"><div>Cybersecurity Basics</div><div style="width:40%" class="bar"><div class="fill" data-fill="70%"></div></div></div>
+      </section>
+
+      <section class="section">
+        <h3>Internships</h3>
+        <div class="project">
+          <strong>Cisco — Cybersecurity Virtual Internship</strong>
+          <p class="muted">Completed a virtual internship focused on network defense, threat detection, and data protection. Score: 80/100.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h3>Contact</h3>
+        <p class="muted">Email: <a href="mailto:omkarjagadale2776@gmail.com" style="color:var(--accent)">omkarjagadale2776@gmail.com</a></p>
+        <p class="muted">Phone: +91 9657076631</p>
+        <p class="muted">Location: Thergaon, Pune City, Maharashtra</p>
+      </section>
+
+      <footer>© 2025 Omkar Jagadale • Built with practical projects & curiosity</footer>
+    </main>
+  </div>
+
+  <script>
+    // animate progress fills
+    document.addEventListener('DOMContentLoaded',()=>{
+      document.querySelectorAll('.fill').forEach(el=>{
+        const w = el.getAttribute('data-fill') || '70%';
+        setTimeout(()=> el.style.width = w, 200);
+      });
+    });
+  </script>
+</body>
+</html>
